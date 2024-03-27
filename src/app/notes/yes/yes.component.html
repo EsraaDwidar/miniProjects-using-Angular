@@ -1,0 +1,9 @@
+<form [formGroup]="form">
+    <input formControlName="title" type="text" placeholder="Enter todo title" />
+    <br><br>
+    <input id="isDone" formControlName="isDone" type="checkbox" >
+    <label for="isDone">isDone</label>
+    <br><br>
+    <button [disabled]="form.invalid" (click)="handleAddItem($event)">Add Item</button>
+</form>
+<app-no *ngFor="let item of todoItems" [item]="item" (itemMArkAsDone)="handleItemMArkAsDone($event)"></app-no>

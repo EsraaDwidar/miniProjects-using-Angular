@@ -1,0 +1,5 @@
+<input (input)="handleInput($event)" [value]="currentItem" />
+<br/><br/>
+<button (click)="handleClick($event)">Add</button>
+<hr/>
+<app-to-do-item *ngFor="let item of items" [item]="item"></app-to-do-item>

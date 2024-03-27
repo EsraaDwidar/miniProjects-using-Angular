@@ -1,0 +1,4 @@
+<div class="container">
+    <p>{{item.title}}</p>
+    <button [disabled]="item.isDone" (click)="handleClick($event)">Mark as done</button>
+</div>
